@@ -1,3 +1,12 @@
+<!-- Navigation Bar -->
+<div style="background-color: black; padding: 10px;">
+    <span style="color: white; font-size: 24px; font-weight: bold; margin-right: 20px;">Antonio Bergallo</span>
+    <a href="index.html" style="color: white; text-decoration: none; padding: 14px 20px;">Home 📄</a>
+    <a href="research.html" style="color: white; text-decoration: none; padding: 14px 20px;">Research 🔍</a>
+    <a href="teaching.html" style="color: white; text-decoration: none; padding: 14px 20px;">Teaching 👩‍🏫</a>
+    <a href="contact.html" style="color: white; text-decoration: none; padding: 14px 20px;">Contact ✉️</a>
+</div>
+
 # AntonioBergallo.github.io
 
 # About me
@@ -16,7 +25,3 @@
 - Webscrapping
 - Text mining
 
----
-
-**Home**[https://antoniobergallo.github.io/]
-**Contact**[https://antoniobergallo.github.io/contact]
