@@ -24,7 +24,7 @@
     <img src="https://img.shields.io/badge/Email-D14836?logo=gmail&logoColor=white" alt="Email">
   </a>
   <a href="https://www.linkedin.com/in/antonio-bergallo-3306a0244/" target="_blank">
-    <img src="https://custom-icon-badges.demolab.com/badge/LinkedIn-0A66C2?logo=linkedin&logoColor=white" alt="LinkedIn">
+    <img src="custom-icon-badges.demolab.com/badge/LinkedIn-0A66C2?logo=linkedin-white&logoColor=fff](https://custom-icon-badges.demolab.com/badge/LinkedIn-0A66C2?logo=linkedin-white&logoColor=fff" alt="LinkedIn">
   </a>
   <a href="https://github.com/AntonioBergallo" target="_blank">
     <img src="https://img.shields.io/badge/GitHub-000?logo=github&logoColor=white" alt="GitHub">
