@@ -2,12 +2,4 @@ title: Antonio Bergallo
 logo: docs/assets/20250320_174522-min.jpg
 description: Economist
 #show_downloads: true
-theme: jekyll-theme-minima
-
-social_links:
-  - title: Github
-    icon: github
-    url: "https://github.com/AntonioBergallo"
-  - title: Email
-    icon: envelope
-    url: "mailto:antoniorbergallo@gmail.com"
+theme: jekyll-theme-minimal
