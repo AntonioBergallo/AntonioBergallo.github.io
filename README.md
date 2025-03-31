@@ -26,5 +26,8 @@
   <a href="https://www.linkedin.com/in/antonio-bergallo-3306a0244/" target="_blank">
     <img src="https://img.shields.io/badge/LinkedIn-0A66C2?logo=linkedin&logoColor=white" alt="LinkedIn">
   </a>
-  <a href="https://github.com/AntonioB
+  <a href="https://github.com/AntonioBergallo" target="_blank">
+    <img src="https://img.shields.io/badge/GitHub-000?logo=github&logoColor=white" alt="GitHub">
+  </a>
+</div>
 
