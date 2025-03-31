@@ -16,7 +16,7 @@
 - Text mining
 
 ### Contact
-<div style="display: flex; justify-content: center; gap: 8px;">
+<div style="display: flex; justify-content: left; gap: 8px;">
   <a href="https://wa.me/5521971351070" target="_blank">
     <img src="https://img.shields.io/badge/WhatsApp-25D366?logo=whatsapp&logoColor=white" alt="WhatsApp">
   </a>
