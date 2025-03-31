@@ -16,7 +16,7 @@
 - Text mining
 
 ### Contact
-<div style="display: flex; justify-content: space-around;">
+<div style="display: flex; justify-content: center; gap: 8px;">
   <a href="https://wa.me/5521971351070" target="_blank">
     <img src="https://img.shields.io/badge/WhatsApp-25D366?logo=whatsapp&logoColor=white" alt="WhatsApp">
   </a>
@@ -26,7 +26,5 @@
   <a href="https://www.linkedin.com/in/antonio-bergallo-3306a0244/" target="_blank">
     <img src="https://img.shields.io/badge/LinkedIn-0A66C2?logo=linkedin&logoColor=white" alt="LinkedIn">
   </a>
-  <a href="https://github.com/AntonioBergallo" target="_blank">
-    <img src="https://img.shields.io/badge/GitHub-000?logo=github&logoColor=white" alt="GitHub">
-  </a>
-</div>
+  <a href="https://github.com/AntonioB
+
