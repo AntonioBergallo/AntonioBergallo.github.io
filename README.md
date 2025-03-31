@@ -3,11 +3,11 @@
 # About me
 
 ## Previous positions
-- Research assistant, DataZoom, 2022-2023
-- Macroeconomics Researcher, Vista Capital, 2023-2025
+- Research assistant, [DataZoom](https://www.econ.puc-rio.br/datazoom/index.html), 2022-2023
+- Macroeconomics Researcher, [Vista Capital](https://vistacapital.com.br/), 2023-2025
 
 ## Education
-- BA in Economics, 2024, PUC-Rio, Brazil
+- BA in Economics, 2024, [PUC-Rio](https://www.econ.puc-rio.br/), Brazil
 
 ## Interests
 - Econometrics
