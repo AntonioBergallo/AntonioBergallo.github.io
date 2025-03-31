@@ -16,7 +16,17 @@
 - Text mining
 
 ### Contact
-[![WhatsApp](https://img.shields.io/badge/WhatsApp-25D366?logo=whatsapp&logoColor=white)](https://wa.me/5521971351070)  
-[![Email](https://img.shields.io/badge/Email-D14836?logo=gmail&logoColor=white)](mailto:antoniorbergallo@gmail.com)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?logo=linkedin&logoColor=white)](https://www.linkedin.com/in/antonio-bergallo-3306a0244/)  
-[![GitHub](https://img.shields.io/badge/GitHub-000?logo=github&logoColor=white)](https://github.com/AntonioBergallo)
+<div style="display: flex; justify-content: space-around;">
+  <a href="https://wa.me/5521971351070" target="_blank">
+    <img src="https://img.shields.io/badge/WhatsApp-25D366?logo=whatsapp&logoColor=white" alt="WhatsApp">
+  </a>
+  <a href="mailto:antoniorbergallo@gmail.com" target="_blank">
+    <img src="https://img.shields.io/badge/Email-D14836?logo=gmail&logoColor=white" alt="Email">
+  </a>
+  <a href="https://www.linkedin.com/in/antonio-bergallo-3306a0244/" target="_blank">
+    <img src="https://img.shields.io/badge/LinkedIn-0A66C2?logo=linkedin&logoColor=white" alt="LinkedIn">
+  </a>
+  <a href="https://github.com/AntonioBergallo" target="_blank">
+    <img src="https://img.shields.io/badge/GitHub-000?logo=github&logoColor=white" alt="GitHub">
+  </a>
+</div>
