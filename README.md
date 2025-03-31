@@ -1,11 +1,9 @@
 <!-- Navigation Bar -->
 <div style="background: #f8f9fa; padding: 10px 20px; border-bottom: 1px solid #ddd; display: flex; align-items: center;">
-    <span style="font-size: 22px; font-weight: bold; margin-right: auto; color: #333;">Antonio Bergallo</span>
+    <span style="font-size: 22px; font-weight: bold; margin-right: auto; color: #333;"></span>
     <a href="index.html" style="color: #333; text-decoration: none; padding: 10px 15px;">Home 📄</a>
     <a href="contact.html" style="color: #333; text-decoration: none; padding: 10px 15px;">Contact ✉️</a>
 </div>
-
-# AntonioBergallo.github.io
 
 ## About me
 
