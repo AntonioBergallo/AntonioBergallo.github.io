@@ -15,3 +15,8 @@
 - Time series analysis and forecasting
 - Webscrapping
 - Text mining
+
+---
+
+**Home**[https://antoniobergallo.github.io/]
+**Contact**[https://antoniobergallo.github.io/contact]
