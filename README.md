@@ -1,9 +1,9 @@
 <!-- Button to the Blog -->
-<a href="{{ site.baseurl }}/blog/" style="display: inline-block; padding: 10px 20px; margin: 20px; color: #3498db; text-decoration: underline; font-weight: bold; border-radius: 5px; transition: transform 0.3s ease; float: right;" 
-   onmouseover="this.style.transform='scale(1.1)';" 
-   onmouseout="this.style.transform='scale(1)';">
-  BLOG
-</a>
+<a href="{{ site.baseurl }}/blog/" style="display: inline-block; padding: 10px 20px; margin: 20px; background-color: #3498db; color: white; text-decoration: none; font-weight: bold; border-radius: 5px; transition: background-color 0.3s ease, transform 0.3s ease; float: right;" 
+    onmouseover="this.style.backgroundColor='#2980b9'; this.style.transform='scale(1.1)';" 
+    onmouseout="this.style.backgroundColor='#3498db'; this.style.transform='scale(1)';">
+   BLOG
+ </a>
 
 ## About me
 
