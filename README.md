@@ -2,7 +2,7 @@
 <a href="{{ site.baseurl }}/blog/" style="display: inline-block; padding: 10px 20px; margin: 20px; color: #3498db; text-decoration: underline; font-weight: bold; border-radius: 5px; transition: transform 0.3s ease; float: right;" 
    onmouseover="this.style.transform='scale(1.1)';" 
    onmouseout="this.style.transform='scale(1)';">
-  Blog
+  BLOG
 </a>
 
 ## About me
