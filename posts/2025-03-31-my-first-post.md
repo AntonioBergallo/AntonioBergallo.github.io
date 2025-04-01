@@ -2,7 +2,6 @@
 layout: post
 title: "My First Post"
 date: 2025-03-31
+excerpt: "This is a brief introduction to my first post."
 categories: blog
 ---
-
-## Teste!
