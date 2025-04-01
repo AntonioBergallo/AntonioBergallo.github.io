@@ -1,4 +1,5 @@
-
+<!-- Button to the Blog -->
+<a href="{{ site.baseurl }}/blog/" class="blog-button">Blog</a>
 ## About me
 
 ### Previous positions
