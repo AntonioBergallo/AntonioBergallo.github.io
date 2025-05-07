@@ -1,5 +1,5 @@
 ---
-title: "Forecasting UK Imports Using Elastic Net in Tidymodels Pipeline"
+title: "Forecasting UK imports data with Elastic Net models in a Tidymodels pipeline"
 author: "Antonio Bergallo"
 date: "2025-05-07"
 output:
