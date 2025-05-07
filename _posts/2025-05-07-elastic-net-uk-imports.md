@@ -464,7 +464,7 @@ $$
 
 Where:
 
-- \( \lambda \) controls the overall strength of regularization  
+- $$\lambda$$ controls the overall strength of regularization  
 - \( \alpha \in [0, 1] \) determines the trade-off between Lasso (\( \alpha = 1 \)) and Ridge (\( \alpha = 0 \))
 
 
