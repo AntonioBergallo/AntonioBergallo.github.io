@@ -823,8 +823,6 @@ results_glmnet_ada <- best_params_ada %>%
   )
 ```
 
-The new results have even lower RMSE than the non-adaptative models.
-
 ``` r
 db_graph <- results_glmnet_ada %>% 
   mutate(name = paste0("penalty=",round(penalty,3),", mixture=",round(mixture,3),", RMSE=",round(mean,3),"")) %>% 
@@ -866,10 +864,11 @@ g3 <-
 
 print(g3)
 ```
+The new results have even lower RMSE than the non-adaptative models.
 
 ![](https://antoniobergallo.github.io/assets/unnamed-chunk-22-1.png)<!-- -->
 
-### Regularization Plot
+### Regularization Path
 
 Finally, to understand the dynamic of model shrinkage, we trace the
 **regularization path**: the evolution of coefficient estimates as the
