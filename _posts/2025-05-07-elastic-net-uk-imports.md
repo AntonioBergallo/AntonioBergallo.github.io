@@ -46,11 +46,10 @@ output:
 
 This report presents a forecasting model for UK monthly goods imports
 using the Elastic Net method within the `tidymodels` framework. The
-model leverages traffic flow data near major ports, national statistics
-on industrial activity and consumption, and international macroeconomic
-indicators.
+model includes high frequency data from different sources on ships arrival, 
+traffic, economic activity and other financial and macroeconomic indicators
 
-The goal is to evaluate the forecast performance of an Elastic Net model
+The goal is to evaluate the forecast performance of multiple Elastic Net models
 compared to a baseline autoregressive model and investigate the
 regularization path of predictors.
 
@@ -94,10 +93,11 @@ invisible(Sys.setlocale("LC_TIME", "C"))
 ### National Highways Traffic
 
 We start by collecting traffic data from the UK’s National Highways API.
-We select two key sites: - **A14/2040A**: Access to Felixstowe Port -
-**M27/9132B**: Access to Southampton Port
+We select two key sites: 
+- **A14/2040A**: Access to Felixstowe Port 
+- **M27/9132B**: Access to Southampton Port
 
-These sites provide monthly data on total vehicle flow and the
+The API provides monthly data on total vehicle flow and the
 proportion of large vehicles registered at each site.
 
 ``` r
@@ -167,8 +167,7 @@ cargo and tanker ship visits aggregated across all UK ports.
 The dataset includes weekly-level observations in ISO format. Since our
 analysis is monthly, we use the end-of-week dates to assign each
 observation to a month and then compute the monthly mean. This is an
-approximation, as some weeks span two months and may introduce slight
-misalignment.
+approximation, as some weeks span two months and cause slight misalignment.
 
 ``` r
 # Step 1: Download shipping activity data from ONS API
@@ -202,10 +201,10 @@ df_ports %>% head(5)
 ### Debit Card Spending
 
 Most ONS data series relevant to forecasting the trade balance are not
-available via API. Therefore, we resort to web scraping. The general
-process is as follows: we access the relevant ONS webpage, locate the
+available via API. Therefore, we resort to webscraping. The general
+process is as follows: we access the ONS webpage, locate the
 most recent Excel file using the `rvest` package, download the file to a
-temporary location, and read in the relevant sheet. As a first example,
+temporary location, and read in the desired sheet. As a first example,
 we collect debit card spending, a high-frequency indicator of domestic
 demand and economic activity.
 
@@ -254,12 +253,11 @@ df_card %>% head(5)
 
 ### Terms of Trade
 
-Next, we collect terms of trade data from the ONS website via web
-scraping. This process mirrors earlier steps: we locate the most recent
-Excel file link using the rvest package, download it to a temporary
-file, and read in the relevant sheet. This dataset provides monthly
-indices that reflect the ratio of export to import prices, a key
-macroeconomic driver of trade dynamics.
+Next, we collect terms of trade data. This process mirrors earlier steps: 
+we locate the most recent Excel file link using the rvest package, 
+download it to a temporary file, and read in the relevant sheet. 
+This dataset provides monthly indices that reflect the ratio of 
+export to import prices, a key macroeconomic driver of trade dynamics.
 
 ``` r
 # Step 1: Define the URL of the ONS terms of trade dataset
@@ -300,10 +298,9 @@ df_tot %>% head(5)
 
 ### Imports & Industrial Production
 
-We retrieve the UK’s monthly imports data (our dependent variable) and
-industrial production index from ONS spreadsheets. These two datasets
-are usually released together, hence, industrial production will be
-lagged one period in our model.
+We then retrieve the UK’s monthly imports data (our dependent variable) and
+industrial production index. These two datasets are usually released together, although
+in different pages.
 
 ``` r
 # Step 1: Define URL for UK goods trade balance dataset
@@ -435,8 +432,8 @@ df_reer %>% head(5)
 ### Elastic Net Regression
 
 The **Elastic Net** (Zou & Hastie, 2005) is a regularized regression
-method that linearly combines the penalties of the Lasso ($\ell_1$) and
-Ridge ($\ell_2$) regressions. It addresses two key limitations of the
+method that linearly combines the penalties of the Lasso ($$\ell_1$$) and
+Ridge ($$\ell_2$$) regressions. It addresses two key limitations of the
 Lasso:
 
 1.  Its tendency to select only one variable from a group of correlated
@@ -446,8 +443,8 @@ Lasso:
 By introducing a **mixing parameter**, the Elastic Net allows the model
 to balance variable selection and coefficient shrinkage, making it
 particularly effective when dealing with **multicollinearity** and large
-feature spaces. As we are not sure which variables are relevant to
-explain UK imports, this is an interesting approach
+feature spaces. As we do not know which variables are relevant to
+explain UK imports ex-ante, this is an interesting approach.
 
 Mathematically, it solves the following optimization problem:
 
@@ -465,12 +462,10 @@ Where:
 
 ### Data Preprocessing
 
-We join all the data and do necessary transformations. All variables are
-in percentage change, apart from the heavy vehicles percentages and the
-GECON. Heavy vehicles percentages are in first difference and GECON is
-already stationary, with no need for transformation. Industrial
-production and terms of trade also need to enter the model lagged
-because they are released later than the imports data.
+We join all the data and do necessary transformations. Almost all variables
+are in percentage change, apart from the heavy vehicles percentages, in first differences, and the
+GECON which is a diffusion index with mean 0. Industrial production and terms of trade enter
+the model lagged due to release mismatch.
 
 ``` r
 dfs <- list(df_imports, df_card, df_gecon, df_ip, df_ports, df_reer, df_tot, df_traffic)
@@ -578,8 +573,8 @@ df_full_sample <- df_final %>%
 We now define the model formula and set up the hyperparameter tuning
 strategy for the Elastic Net model. The formula includes all predictors
 in the dataset except for the date and target variable (`Imports`). The
-grid search explores combinations of penalty ($\lambda$) and mixing
-ratio ($\alpha$) values using a **Latin Hypercube Sampling** design,
+grid search explores combinations of penalty $$\lambda$$ and mixing
+ratio $$\alpha$$ values using a **Latin Hypercube Sampling** design,
 which ensures good coverage of the parameter space with fewer samples.
 
 ``` r
