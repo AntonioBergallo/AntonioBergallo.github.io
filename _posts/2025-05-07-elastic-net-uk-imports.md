@@ -1,9 +1,3 @@
-<head>
-  <script type="text/javascript" async
-    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
-  </script>
-</head>
-
 ---
 title: "Forecasting UK Imports Using Elastic Net with Tidymodels"
 author: "Antonio Bergallo"
@@ -14,6 +8,13 @@ output:
     preserve_yaml: true
     toc: false
 ---
+
+
+<head>
+  <script type="text/javascript" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+  </script>
+</head>
 
 ## Table of Contents
 
@@ -456,9 +457,9 @@ $$
 
 Where:
 
-- $\lambda$ controls the overall strength of regularization,
-- $\alpha \in [0, 1]$ determines the trade-off between Lasso
-  ($\alpha = 1$) and Ridge ($\alpha = 0$).
+- \( \lambda \( controls the overall strength of regularization,
+- \( \alpha \in [0, 1] \( determines the trade-off between Lasso
+  \( (\alpha = 1 ) \( and Ridge \( (\alpha = 0) \(.
 
 ------------------------------------------------------------------------
 
@@ -563,7 +564,7 @@ df_sampling %>%
         plot_time_series_cv_plan(date, Imports, .facet_ncol = 2, .interactive = FALSE) 
 ```
 
-![](assets/unnamed-chunk-14-1.png)<!-- -->
+![](https://antoniobergallo.github.io/assets/unnamed-chunk-14-1.png)<!-- -->
 
 ``` r
 df_full_sample <- df_final %>% 
@@ -736,7 +737,7 @@ g2 <-
 print(g2)
 ```
 
-![](assets/unnamed-chunk-19-1.png)<!-- -->
+![](https://antoniobergallo.github.io/assets/unnamed-chunk-19-1.png)<!-- -->
 
 ### Adaptive Elastic Net
 
@@ -759,11 +760,11 @@ $$
 
 Where:
 
-- $w_j = \frac{1}{|\hat{\beta}^{(init)}_j|^\gamma}$ are adaptive weights
+- \( w_j = \frac{1}{|\hat{\beta}^{(init)}_j|^\gamma} \) are adaptive weights
   from an initial estimator,
-- $\lambda$ and $\alpha$ are the regularization strength and mixing
+- \( \lambda \( and \( \alpha \( are the regularization strength and mixing
   parameter respectively,
-- $\gamma > 0$ controls the influence of the adaptive weights.
+- \( \gamma > 0 \( controls the influence of the adaptive weights.
 
 We repeat the tuning procedure with the new weights, seeking improved
 generalization and interpretability. Our weights are defined as the
@@ -859,7 +860,7 @@ g3 <-
 print(g3)
 ```
 
-![](assets/unnamed-chunk-22-1.png)<!-- -->
+![](https://antoniobergallo.github.io/assets/unnamed-chunk-22-1.png)<!-- -->
 
 ### Regularization Plot
 
@@ -906,7 +907,7 @@ g4 <-
 print(g4)
 ```
 
-![](assets/unnamed-chunk-24-1.png)<!-- -->
+![](https://antoniobergallo.github.io/assets/unnamed-chunk-24-1.png)<!-- -->
 
 ## Conclusion
 
