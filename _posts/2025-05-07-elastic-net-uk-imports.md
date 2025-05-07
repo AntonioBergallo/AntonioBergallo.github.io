@@ -465,7 +465,7 @@ $$
 Where:
 
 - $$\lambda$$ controls the overall strength of regularization  
-- \( \alpha \in [0, 1] \) determines the trade-off between Lasso (\( \alpha = 1 \)) and Ridge (\( \alpha = 0 \))
+- $$\alpha \in [0, 1]$$ determines the trade-off between Lasso $$( \alpha = 1 )$$ and Ridge $$( \alpha = 0 )$$
 
 
 ------------------------------------------------------------------------
@@ -767,11 +767,11 @@ $$
 
 Where:
 
-- \( w_j = \frac{1}{|\hat{\beta}^{(init)}_j|^\gamma} \) are adaptive weights  
+- $$w_j = \frac{1}{|\hat{\beta}^{(init)}_j|^\gamma}$$ are adaptive weights  
   from an initial estimator,  
-- \( \lambda \) and \( \alpha \) are the regularization strength and mixing  
+- $$\lambda$$ and $$\alpha$$ are the regularization strength and mixing  
   parameter respectively,  
-- \( \gamma > 0 \) controls the influence of the adaptive weights.
+- $$\gamma > 0$$ controls the influence of the adaptive weights.
 
 We repeat the tuning procedure with the new weights, seeking improved
 generalization and interpretability. Our weights are defined as the
