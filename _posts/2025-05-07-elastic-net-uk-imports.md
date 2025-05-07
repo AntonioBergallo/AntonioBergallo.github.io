@@ -26,10 +26,9 @@ output:
   - [National Highways Traffic](#national-highways-traffic)
   - [ONS Shipping Data](#ons-shipping-data)
   - [Debit Card Spending](#debit-card-spending)
-  - [Business Insights Survey](#business-insights-survey)
   - [Terms of Trade](#terms-of-trade)
-  - [Trade Balance & Industrial
-    Production](#trade-balance--industrial-production)
+  - [Imports & Industrial
+    Production](#imports--industrial-production)
   - [Global Economic Conditions](#global-economic-conditions)
   - [Real Effective Exchange Rate](#real-effective-exchange-rate)
 - [Modeling](#modeling)
