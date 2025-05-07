@@ -2,6 +2,7 @@
 title: "Forecasting UK imports data with Elastic Net models in a Tidymodels pipeline"
 author: "Antonio Bergallo"
 date: "2025-05-07"
+tags: [r, tidymodels, elastic-net, forecasting, lasso, econometrics, uk, trade]
 output:
   md_document:
     variant: gfm
@@ -10,12 +11,6 @@ output:
 ---
 
 
-<script>
-window.MathJax = {
-  tex: {
-    inlineMath: [['\\(', '\\)']]
-  }
-};
 </script>
 <script type="text/javascript" async
   src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
