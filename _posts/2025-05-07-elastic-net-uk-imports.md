@@ -1,7 +1,13 @@
+<head>
+  <script type="text/javascript" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+  </script>
+</head>
+
 ---
 title: "Forecasting UK Imports Using Elastic Net with Tidymodels"
 author: "Antonio Bergallo"
-date: "2025-05-06"
+date: "2025-05-07"
 output:
   md_document:
     variant: gfm
@@ -77,19 +83,7 @@ library(ISOweek)
 library(onsr)
 
 # Set locale to English for month names
-Sys.setlocale("LC_TIME", "C")
-```
-
-    ## [1] "C"
-
-``` r
-# Global chunk options
-knitr::opts_chunk$set(
-  echo = TRUE,
-  warning = FALSE,
-  message = FALSE,
-  fig.path = "docs/assets/" 
-)
+invisible(Sys.setlocale("LC_TIME", "C"))
 ```
 
 ------------------------------------------------------------------------
@@ -470,6 +464,13 @@ Where:
 
 ### Data Preprocessing
 
+We join all the data and do necessary transformations. All variables are
+in percentage change, apart from the heavy vehicles percentages and the
+GECON. Heavy vehicles percentages are in first difference and GECON is
+already stationary, with no need for transformation. Industrial
+production and terms of trade also need to enter the model lagged
+because they are released later than the imports data.
+
 ``` r
 dfs <- list(df_imports, df_card, df_gecon, df_ip, df_ports, df_reer, df_tot, df_traffic)
 df_final <- reduce(dfs, full_join) %>% 
@@ -480,7 +481,7 @@ df_final <- reduce(dfs, full_join) %>%
   mutate(across(c(IP, TOT), ~lag(.x))) %>% # Industrial production and Terms of Trade must be lagged due to late release
   mutate(Imports_lag1 = lag(Imports,1),
          Imports_lag2 = lag(Imports,2)) %>% 
-  na.omit 
+  na.omit
 
 df_final %>% tail(5)
 ```
@@ -497,8 +498,10 @@ df_final %>% tail(5)
     ## #   Heavy_Pct_2900 <dbl>, Heavy_Pct_3840 <dbl>, Imports_lag1 <dbl>,
     ## #   Imports_lag2 <dbl>
 
+The Augmented Dickey-Fuller test rejects presence of unit root for all
+variables, indicating no sign of non-stationarity.
+
 ``` r
-# Applying Augmented Dickey-Fuller test to check stationarity
 df_final %>%
   select(-date) %>%
   map(~ ur.df(.x, type = "drift", selectlags = "AIC")) %>%
@@ -527,8 +530,6 @@ df_final %>%
     ## 11 Heavy_Pct_3840                   -7.91
     ## 12 Imports_lag1                     -6.07
     ## 13 Imports_lag2                     -6.06
-
-Presence of unit root is rejected for all the variables
 
 ------------------------------------------------------------------------
 
@@ -562,7 +563,7 @@ df_sampling %>%
         plot_time_series_cv_plan(date, Imports, .facet_ncol = 2, .interactive = FALSE) 
 ```
 
-![](docs/assets/unnamed-chunk-12-1.png)<!-- -->
+![](assets/unnamed-chunk-14-1.png)<!-- -->
 
 ``` r
 df_full_sample <- df_final %>% 
@@ -735,7 +736,7 @@ g2 <-
 print(g2)
 ```
 
-![](docs/assets/unnamed-chunk-17-1.png)<!-- -->
+![](assets/unnamed-chunk-19-1.png)<!-- -->
 
 ### Adaptive Elastic Net
 
@@ -858,7 +859,7 @@ g3 <-
 print(g3)
 ```
 
-![](docs/assets/unnamed-chunk-20-1.png)<!-- -->
+![](assets/unnamed-chunk-22-1.png)<!-- -->
 
 ### Regularization Plot
 
@@ -905,7 +906,7 @@ g4 <-
 print(g4)
 ```
 
-![](docs/assets/unnamed-chunk-22-1.png)<!-- -->
+![](assets/unnamed-chunk-24-1.png)<!-- -->
 
 ## Conclusion
 
