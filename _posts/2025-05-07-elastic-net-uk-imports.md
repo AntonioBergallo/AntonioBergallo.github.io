@@ -618,8 +618,8 @@ a map structure and return a nested tibble, as for each parameter we
 need to collect metrics and predictions. Notice that we could use
 `tidymodels::finalize_workflow()` here, but `glmnet` structure does not
 work properly with it. Even with our tuned `penalty` and `mixture`
-parameters it fits for a generic grid of lambdas. `glmnet` only fits for
-a unique penalty value if this is specified in the `path_values`
+parameters, it fits for a generic grid of lambdas. `glmnet` only fits for
+a unique penalty value if specified in the `path_values`
 argument. Hence, we constructed these `do.call` structures, to achieve
 what `tidymodels::finalize_workflow()` should, but does not due to an
 awkward interaction with `glmnet`.
@@ -872,6 +872,35 @@ problem, as the goal of this exercise is not to perform inference, but
 to predict.
 
 ``` r
+reg_path_grid <- grid_space_filling(
+    penalty(range = c(-4,1)),
+    type = "latin_hypercube",
+    size = 200
+)
+
+
+reg_path <- reg_path_grid %>%
+  mutate(
+    args = map(penalty, ~list(penalty = .x, mixture = results_glmnet_ada$mixture[[1]])),
+    
+    model_spec = map(args, ~ do.call(linear_reg, .x)),
+    
+    model_spec = map2(model_spec, penalty, ~ do.call(
+      set_engine,
+      c(list(object = .x, engine = "glmnet"), list(path_values = .y, penalty_factors = ada_factors))
+    )),
+    
+    final_wf = map(model_spec, ~ workflow(preprocessor = formula, spec = .x)),
+    
+    final_fit = map(final_wf, ~ last_fit(.x, split = df_full_sample)),
+    
+    final_model = map(final_fit, extract_fit_parsnip),
+    
+    coefficients = map(final_model, ~coefficients(.x$fit)),
+    coefficients = map(coefficients, ~cbind(coefs = rownames(.x),
+                                                            tibble(values = .x %>% as.matrix() %>%.[,1])))
+  )
+  
 db_graph <- reg_path %>% 
   select(penalty, coefficients) %>% 
   unnest(coefficients)
