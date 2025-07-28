@@ -921,7 +921,7 @@ picture.
 
 It is also interesting to note the change of focus from the und1x
 measure (later renamed CPIX) to the CPIF (which became the official
-target in mid-2017). In 2025,
+target in mid-2017).
 
 ``` r
 tf_idf_month <- data_tf_idf %>% 
@@ -1267,13 +1267,13 @@ The lag of policy being statistically significant for hold indicates
 that a previous hold reduces probability of cuts. The 2.19 value for a
 previous hike by itself puts the latent score above the hold\|hike
 threshold, indicating that the Riksbank rarely hikes and stops or
-reverse course in the following meeting. The cut\|hold threshold not
+reverse course in the following meeting. The cut|hold threshold not
 being statistically significant indicates that, in constrast to hikes,
 cuts and holds are not easily distinguishable.
 
 Now, I add the CPIF inflation and the monthly GDP indicator, to check if
 the significance of the sentiment still holds. Unfortunately, I don’t
-have the data on when this data was released, but we regress them
+have the information on when this data was released, but we regress them
 lagged, so this should not be a problem, as the Bank probably had the
 previous month information by the time of the meeting.
 
