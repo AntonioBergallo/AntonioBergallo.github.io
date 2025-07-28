@@ -640,7 +640,7 @@ g3 <- ggplot(data = db_graph) +
 
 g3
 ```
-<img src="https://antoniobergallo.github.io/assets/riks-unnamed-chunk-17-1.png" width="50%" />
+<img src="https://antoniobergallo.github.io/assets/riks-unnamed-chunk-17-1.png" width="90%" />
 
 Word counting provides interesting insights on where the Riksbank was
 focusing at each period in history. Inflation is brought up more
