@@ -706,13 +706,13 @@ g4_2 <- ggplot(db_graph %>% filter(date == last(date)), aes(x = holder)) +
 
 g4_1
 ```
-<img src="https://antoniobergallo.github.io/assets/riks-unnamed-chunk-18-1.png" width="50%" />
+<img src="https://antoniobergallo.github.io/assets/riks-unnamed-chunk-18-1.png" width="90%" />
 
 ``` r
 g4_2
 ```
 
-<img src="https://antoniobergallo.github.io/assets/riks-unnamed-chunk-18-2.png" width="50%" />
+<img src="https://antoniobergallo.github.io/assets/riks-unnamed-chunk-18-2.png" width="90%" />
 
 These graphs produce a more marginal and nuanced analysis of the
 Riksbank focus shift. “High” inflation was substituted by “risk” and
@@ -752,7 +752,7 @@ g5 <-
 g5
 ```
 
-<img src="https://antoniobergallo.github.io/assets/riks-unnamed-chunk-19-1.png" width="50%" />
+<img src="https://antoniobergallo.github.io/assets/riks-unnamed-chunk-19-1.png" width="90%" />
 
 The graph cloud provides a nice visualization on the main topics of the
 latest Riksbank minute. There are three main clouds connecting a lot of
@@ -879,7 +879,7 @@ Source: Riksbank and Own Calculations") +
 g6_1
 ```
 
-<img src="https://antoniobergallo.github.io/assets/riks-unnamed-chunk-22-1.png" width="50%" />
+<img src="https://antoniobergallo.github.io/assets/riks-unnamed-chunk-22-1.png" width="90%" />
 
 The graph above shows TF-IDF scores considering each year as an unique
 document. It is useful to tell a broader story and see more long term
@@ -965,7 +965,7 @@ g6_2
 ```
 
 
-<img src="https://antoniobergallo.github.io/assets/riks-unnamed-chunk-23-1.png" width="50%" />
+<img src="https://antoniobergallo.github.io/assets/riks-unnamed-chunk-23-1.png" width="90%" />
 
 The graph above does the same analysis as the previous one, but now each
 month is considered an unique document. I select minutes from the last
@@ -1101,13 +1101,13 @@ Source: Riksbank and Own Calculations") +
 g7_1
 ```
 
-<img src="https://antoniobergallo.github.io/assets/riks-unnamed-chunk-25-1.png" width="50%" />
+<img src="https://antoniobergallo.github.io/assets/riks-unnamed-chunk-25-1.png" width="90%" />
 
 ``` r
 g7_2
 ```
 
-<img src="https://antoniobergallo.github.io/assets/riks-unnamed-chunk-25-2.png" width="50%" />
+<img src="https://antoniobergallo.github.io/assets/riks-unnamed-chunk-25-2.png" width="90%" />
 
 These two graphs show the evolution of mean probability of a sentence
 “belonging” to each topic in each minute. The words selected are the
