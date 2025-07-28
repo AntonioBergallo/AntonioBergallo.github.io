@@ -706,13 +706,13 @@ g4_2 <- ggplot(db_graph %>% filter(date == last(date)), aes(x = holder)) +
 
 g4_1
 ```
-<img src="https://antoniobergallo.github.io/assets/riks-unnamed-chunk-18-1.png" width="130%" />
+<img src="https://antoniobergallo.github.io/assets/riks-unnamed-chunk-18-1.png" width="100%" />
 
 ``` r
 g4_2
 ```
 
-<img src="https://antoniobergallo.github.io/assets/riks-unnamed-chunk-18-2.png" width="130%" />
+<img src="https://antoniobergallo.github.io/assets/riks-unnamed-chunk-18-2.png" width="100%" />
 
 These graphs produce a more marginal and nuanced analysis of the
 Riksbank focus shift. “High” inflation was substituted by “risk” and
@@ -1101,13 +1101,13 @@ Source: Riksbank and Own Calculations") +
 g7_1
 ```
 
-<img src="https://antoniobergallo.github.io/assets/riks-unnamed-chunk-25-1.png" width="160%" />
+<img src="https://antoniobergallo.github.io/assets/riks-unnamed-chunk-25-1.png" width="100%" />
 
 ``` r
 g7_2
 ```
 
-<img src="https://antoniobergallo.github.io/assets/riks-unnamed-chunk-25-2.png" width="160%" />
+<img src="https://antoniobergallo.github.io/assets/riks-unnamed-chunk-25-2.png" width="100%" />
 
 These two graphs show the evolution of mean probability of a sentence
 “belonging” to each topic in each minute. The words selected are the
