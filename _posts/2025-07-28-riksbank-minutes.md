@@ -20,18 +20,17 @@ output:
 - [Introduction](#introduction)
 - [Setup](#setup)
 - [Data Collection](#data-collection)
-- [Python Integration and
-  Configuration](#python-integration-configuration)
+- [Python Integration and Configuration](#python-integration-and-configuration)
   - [Spacyr Library](#spacyr-library)
   - [FinBERT Model](#finbert-model)
 - [Data Parsing](#data-parsing)
 - [Exploring the Data](#exploring-the-data)
   - [Sentiment Analysis](#sentiment-analysis)
-  - [Word and Bigram Counting](#word-bigram-counting)
+  - [Word and Bigram Counting](#word-and-bigram-counting)
   - [TF-IDF Scores](#tf-idf-scores)
   - [Correlation](#correlation)
   - [Latent Dirichlet Allocation (LDA)](#latent-dirichlet-allocation)
-- [Modeling](#modeling)
+- [Modelling](#modelling)
   - [Data Preprocessing](#data-preprocessing)
   - [Ordered Probit Model](#ordered-probit-model)
 - [Conclusion](#conclusion)
@@ -251,6 +250,8 @@ minutes <- links %>%
 
 ## Python Integration and Configuration
 
+### Spacyr Library
+
 Now that we have all the sentences, it is important to parse the data in
 an useful and convenient way. For this purpose, I use the `spacyr`
 package. It is an R interface to the spaCy natural language procession
@@ -287,7 +288,7 @@ ran once.
 
 spacy_initialize(model = "en_core_web_sm")
 ```
-
+### FinBERT Model
 I also use Python to run the AI sentiment analysis model. The model
 chosen for this task is the FinBERT, a version of Google’s 2018 BERT
 trained on financial text. This was the undisputed state-of-the-art
@@ -990,7 +991,7 @@ Finally, in the second semester of 2023, the vulnerability of the
 Swedish Krone was the focus of Riksbank minutes, as “sek” and
 “depreciation” reached high scores in July and October.
 
-## Latent Dirichlet Allocation (LDA)
+## Latent Dirichlet Allocation
 
 The **Latent Dirichlet Allocation model** is an unsupervised machine
 learning algorithm that, given an arbitrary **k** amount of topics,
@@ -1156,7 +1157,7 @@ explain future decisions?
 To answer that, I run an Ordered Probit Model to find if Minutes
 sentiment can help explain moves in the policy rate.
 
-### Data preprocessing
+### Data Preprocessing
 
 To start, it is necessary to download the policy rate data from the
 Riksbank’s API. I then complete, adding days in which there is no
