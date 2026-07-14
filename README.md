@@ -7,6 +7,11 @@
 
 ## About me
 
+### Currently 
+
+- MSC Candidate in Economics, [PUC-Rio](https://www.econ.puc-rio.br/), Brazil
+- Research Assistant, [DataZoom](https://www.econ.puc-rio.br/datazoom/index.html), 2022-2023
+
 ### Previous positions
 - Research Assistant, [DataZoom](https://www.econ.puc-rio.br/datazoom/index.html), 2022-2023
 - Macroeconomics Researcher, [Vista Capital](https://vistacapital.com.br/), 2023-2025
