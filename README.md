@@ -9,7 +9,7 @@
 
 ### Currently 
 
-- MSC Candidate in Economics, [PUC-Rio](https://www.econ.puc-rio.br/), Brazil
+- MSc Candidate in Economics, [PUC-Rio](https://www.econ.puc-rio.br/), Brazil
 - Research Assistant, [DataZoom](https://www.econ.puc-rio.br/datazoom/index.html), 2022-2023
 
 ### Previous positions
